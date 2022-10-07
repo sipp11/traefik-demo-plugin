@@ -1,9 +1,6 @@
 displayName: Traefik Demo Plugin
 type: middleware
-iconPath: .assets/icon.png
-
 import: github.com/sipp11/traefik-demo-plugin
-
 summary: '[Demo] Add Request Header'
 
 testData:
