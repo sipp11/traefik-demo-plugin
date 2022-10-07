@@ -14,7 +14,7 @@ func TestDemo(t *testing.T) {
 	cfg.Headers["X-Host"] = "[[.Host]]"
 	cfg.Headers["X-Method"] = "[[.Method]]"
 	cfg.Headers["X-URL"] = "[[.URL]]"
-	cfg.Headers["X-URL"] = "[[.URL]]"
+	cfg.Headers["X-URLX"] = "[[.URL]]"
 	cfg.Headers["X-Demo-One"] = "test"
 
 	ctx := context.Background()
@@ -36,6 +36,7 @@ func TestDemo(t *testing.T) {
 
 	assertHeader(t, req, "X-Host", "localhost")
 	assertHeader(t, req, "X-URL", "http://localhost")
+	assertHeader(t, req, "X-URLX", "http://localhost")
 	assertHeader(t, req, "X-Method", "GET")
 	assertHeader(t, req, "X-Demo-One", "test")
 }
